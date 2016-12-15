@@ -1,0 +1,4 @@
+[23-Nov-2016 13:26:06 America/Denver] PHP Notice:  Undefined index: nit in /home2/arketero/public_html/encuentralopronto/action/enviocorreo.php on line 6
+[25-Nov-2016 06:51:47 America/Denver] PHP Fatal error:  Class 'SMTP' not found in /home2/arketero/public_html/encuentralopronto/action/PHPMailer/class.phpmailer.php on line 1478
+[25-Nov-2016 06:52:08 America/Denver] PHP Fatal error:  Class 'SMTP' not found in /home2/arketero/public_html/encuentralopronto/action/PHPMailer/class.phpmailer.php on line 1478
+[25-Nov-2016 06:53:09 America/Denver] PHP Fatal error:  Class 'SMTP' not found in /home2/arketero/public_html/encuentralopronto/action/PHPMailer/class.phpmailer.php on line 1478

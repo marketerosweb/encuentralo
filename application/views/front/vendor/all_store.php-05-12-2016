@@ -1,0 +1,57 @@
+<div class="title-header page-checkout">
+NUESTRAS TIENDAS</div>
+<style type="text/css">
+.vendor-photo{
+height: 350px;
+  background: #fff none repeat scroll 0 0;
+  border: 3px solid rgba(200, 200, 200, 0.25);
+  height: 350px;
+  line-height: 350px;
+}
+    
+    .vendor-photo img{
+        width: 100%;
+    }
+</style>
+
+<!-- PAGE -->
+<section class="page-section all-vendors">
+    <div class="container">
+        <div class="row">
+       
+        	<?php 
+				$all_vendors = $this->db->get_where('vendor',array('status'=>'approved'))->result_array();
+				foreach($all_vendors as $row){
+			?>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+            	<div class="vendor-details">
+                	
+                    <div class="vendor-photo" >
+                    <a href="/index.php/home/vendor/<?php echo $row['vendor_id'].'/'.$row['display_name']; ?>/">
+                        <?php if(file_exists('uploads/vendor/logo_'.$row['vendor_id'].'.png')){?>
+                        <img src="<?php echo base_url();?>uploads/vendor/logo_<?php echo $row['vendor_id'];?>.png" />
+                        <?php }else{?>
+                            <img src="<?php echo base_url();?>uploads/vendor/default.jpg" width="100%"/>
+                        <?php }?>
+                    </div>
+
+                    <div class="vendor-profile">
+                    	<h3 style="text-align: center;">
+                        	
+							<?php echo $row['display_name'];?>
+                            
+                        </h3>
+                     </a>  
+                       
+                    </div>
+                   
+                </div>
+                
+            </div>
+        	<?php 
+				}
+			?>
+        </div>
+    </div>
+</section>
+<!-- /PAGE -->

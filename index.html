@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  	<head>
+      
+      <title>Encuéntralo pronto</title>
+	  	<!-- Meta -->
+	  	<meta charset="utf-8">
+      	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable=no">
+      	
+      
+	  
+	  	<!-- Stylesheet -->
+      	<link rel="stylesheet" type="text/css" href="layout/style.css">
+		<link rel="stylesheet" type="text/css" href="layout/media.css">
+		
+		<!-- Color schema -->
+		
+		
+		<!-- Animate -->
+    	<link rel="stylesheet" href="layout/plugins/cssanimation/animate.css" type="text/css">
+	  
+      	<!-- Bootstrap -->
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script type="text/javascript">
+    function ocultarform(){
+        var contenedor = document.getElementById("registroPoliticas");
+        contenedor.style.display = "none";
+        return true;
+    }
+</script>
+		<style type="text/css">
+			#fo3 > input {
+			  margin-top: 12px;
+			  width: 100%;
+			}
+			.button-close {
+			  text-align: right;
+			}
+			.button-close a {
+			  background: #000 none repeat scroll 0 0;
+			  color: #fff;
+			  padding: 3px;
+			}
+		</style>
+
+	</head>
+
+  	<body>
+
+		<!-- Loader -->
+		<div class="page-loader">
+			<div class="progress">Cargando...</div>
+		</div>
+
+
+		<!-- inicio form registrarse-->
+
+<div id="registroPoliticas" class="modal fade in" id="myModal" role="dialog" style="display: block; z-index: 999999999" aria-hidden="false"; ><div class="modal-backdrop fade in" style="height: 100%;"></div>
+    <div class="modal-dialog" style="width: 58%; z-index: 99999999">
+    <div class="button-close"><a href="#" onclick="ocultarform();">Cerrar</a></div>
+      <!-- Modal content-->
+      <div class="modal-content">
+       <!-- <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          
+        </div>-->
+            <div class="modal-body">
+            <div class="title" style="text-align: center;"><img src="http://encuentralopronto.com/uploads/logo_image/logo_3.png" width="40%"></div>
+            <div class="title dual" style="text-align: center; width: 50%; float: left;">
+            <h4> Registra tu comercio </h4>
+            </div>
+            <div class="title dual" style="text-align: center; width: 50%; float: left;">
+            <h4> <a href="http://encuentralopronto.com/index.php/vendor" target="_blank">Ingresa si ya estás registrado </a> </h4>
+            </div>
+                <form class="crea-cuenta" method="post" action="/action/enviocorreo.php"  id="fo3" name="fo3">
+                    <input name="nombreContacto" placeholder="Nombre del Contacto" type="text" required><br>
+                    <input name="nombreComercio" placeholder="Nombre del Comercio" type="text" required><br>
+                    <input name="nit" placeholder="NIT" type="text" required><br>
+                    <input name="telFijo" placeholder="Número telefónico fijo" type="text" required><br>
+                    <input name="celular" placeholder="Número celular" type="text" required><br>
+                    <input name="email" placeholder="Correo Electrónico " type="email" required><br>
+                    <input name="productos" placeholder="Productos o Servicios ofrecidos por el Comercio" type="text" required><br>
+                    <input name="ciudad" placeholder="Ciudad" type="text"><br>
+                    <input type="checkbox" name="acepto" value="Acepto" style="width: 10%" required> <a href="http://encuentralopronto.com/politicas-de-privacidad.html" target="_blank">Acepto las políticas de privacidad</a>
+
+                    <div class="button-send"><input value="Registrate"  type="submit"   name="mysubmit"> </div>
+
+                </form>
+              
+            </div>
+        <div id="result"></div>
+        <div class="modal-footer footertext">
+        <!--Una vez hayamos validado esta información nos pondremos en contacto para seguir con el proceso de creación de tu tienda-->
+         <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+<!-- fin form registrarse-->
+
+		<!-- Header -->
+		<header id="#top">
+
+			<!-- Logo -->
+    		<div class="logo">
+				<img src="http://encuentralopronto.com/uploads/logo_image/logo_3.png" width="30%"  /> 
+			</div>
+
+    		<h1>Bienvenidos</h1>
+    		<div class="videoEncuentralo">
+				<video src="encuentralopronto.mp4" width="450" autoplay loop controls></video>
+    		</div>
+
+			<p>
+				Espéranos!!!  <br />
+				Estámos a un paso de nuestra apertura
+			</p>
+         
+         	<!-- Countdown -->
+         	<div class="countdown"></div>
+         
+         
+
+		</header>
+
+	
+
+	
+
+		
+
+		<!-- Google Maps -->
+		<section class="google-map" style="display: none;">
+			<div id="google-container"></div>
+			<div id="zoom-in"></div>
+			<div id="zoom-out"></div>
+			
+			<div class="contact-info">
+				<div class="container">
+				 	<div class="row">
+				  		
+				 	</div>
+				</div>
+			</div>			  
+		</section>
+
+		<!-- Footer -->
+		<footer style="display: none;">
+		  	<div class="container">
+			 	<div class="row">
+		
+					<!-- Up button -->
+					<a  href="#top" class="up-btn"><i class="fa fa-chevron-up"></i></a>
+
+			   		
+		
+			 	</div>
+		  	</div>
+		</footer>
+
+	</body>
+	
+	<!-- jQuery -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.js"></script>
+	
+	<!-- Plugins -->
+	<script src="layout/plugins/backstretch/jquery.backstretch.min.js"></script>
+	<script src="layout/plugins/countdown/jquery.countdown.min.js"></script>
+	<script src="layout/plugins/validate/jquery.validate.min.js"></script>
+	<script src="layout/plugins/scrollreveal/scrollreveal.js"></script>
+	<script src="layout/plugins/ytplayer/jquery.mb.ytplayer.js"></script>
+	<script src="layout/plugins/smoothscroll/smoothscroll.js"></script>
+	<script src="layout/plugins/ajaxchimp/jquery.ajaxchimp.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACD4glC7QueG1h3FuoNbDWL28vjrnNjKo"></script>
+	
+
+	<!-- Main -->
+	<script src="layout/js/main.js"></script>
+	
+	<script type="text/javascript">
+		//Google Maps
+		var arrMap = {
+			"title":"Los Angeles, United States",
+			"latitude":33.956408,
+			"longitude":-118.188726,
+			"zoom":10,
+			"marker":"layout/images/map-marker-green.png",
+			"color":"#24b7a4"
+		}
+	
+		$(document).ready(function() {
+			//Backstretch
+			$("header").backstretch("images/slide/1.jpg");
+		});
+	</script>
+	
+
+
+
+<script src="http://encuentralopronto.com/template/front/assets/plugins/jquery/jquery-migrate.min.js">
+<script src="http://encuentralopronto.com/template/front/assets/plugins/bootstrap/js/bootstrap.min.js">
+<script src="http://encuentralopronto.com/template/front/assets/plugins/back-to-top.js">
+<script src="http://encuentralopronto.com/template/front/assets/plugins/owl-carousel/owl-carousel/owl.carousel.js">
+<script src="http://encuentralopronto.com/template/front/assets/plugins/scrollbar/src/jquery.mousewheel.js">
+<script src="http://encuentralopronto.com/template/front/assets/plugins/scrollbar/src/perfect-scrollbar.js">
+<script src="http://encuentralopronto.com/template/front/assets/plugins/noUiSlider/jquery.nouislider.full.min.js">
+<script src="http://encuentralopronto.com/template/front/assets/plugins/jquery.parallax.js">
+<script src="http://encuentralopronto.com/template/front/assets/plugins/jquery-steps/build/jquery.steps.js">
+<script src="http://encuentralopronto.com/template/front/assets/plugins/sky-forms/version-2.0.1/js/jquery.validate.min.js">
+<script src="http://encuentralopronto.com/template/front/assets/plugins/sky-forms/version-2.0.1/js/jquery-ui.min.js">
+<script src="http://encuentralopronto.com/template/front/assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js">
+<script src="http://encuentralopronto.com/template/front/assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js">
+<script src="http://encuentralopronto.com/template/front/assets/js/custom.js">
+<script src="http://encuentralopronto.com/template/front/assets/js/plugins/stepWizard.js">
+<script src="http://encuentralopronto.com/template/front/assets/js/forms/page_login.js">
+<script src="http://encuentralopronto.com/template/front/assets/js/forms/product-quantity.js">
+<script src="http://encuentralopronto.com/template/front/assets/js/shop.app.js">
+<script src="http://encuentralopronto.com/template/front/assets/js/app.js">
+<script src="http://encuentralopronto.com/template/front/assets/js/plugins/owl-carousel.js">
+<script src="http://encuentralopronto.com/template/front/assets/js/plugins/revolution-slider.js">
+<script src="http://encuentralopronto.com/template/front/assets/js/plugins/datepicker.js">
+<script src="http://encuentralopronto.com/template/front/assets/plugins/counter/waypoints.min.js">
+<script src="http://encuentralopronto.com/template/front/assets/plugins/counter/jquery.counterup.min.js">
+<script src="http://encuentralopronto.com/template/front/assets/js/pages/page_contacts.js">
+<script src="http://encuentralopronto.com/template/front/assets/plugins/flexslider/jquery.flexslider-min.js">
+<script src="http://encuentralopronto.com/template/front/assets/js/plugins/parallax-slider.js">
+<script src="http://encuentralopronto.com/template/front/assets/plugins/parallax-slider/js/modernizr.js">
+<script src="http://encuentralopronto.com/template/front/assets/plugins/parallax-slider/js/jquery.cslider.js">
+<script src="http://encuentralopronto.com/template/front/assets/plugins/ionrangeslider/js/ion.rangeSlider.js">
+<script src="http://encuentralopronto.com/template/front/assets/js/plugins/bootstrap-notify.min.js">
+<script src="http://encuentralopronto.com/template/front/assets/plugins/fancybox/source/jquery.fancybox.pack.js">
+<script src="http://encuentralopronto.com/template/front/assets/js/plugins/fancy-box.js">
+<script src="http://encuentralopronto.com/template/front/assets/js/ajax_method.js">
+<script src="http://encuentralopronto.com/template/front/assets/plugins/image-hover/js/modernizr.js">
+<script src="http://encuentralopronto.com/template/front/assets/plugins/image-hover/js/touch.js">
+<script src="http://encuentralopronto.com/template/front/assets/plugins/dropdown/js/modernizr.custom.63321.js">
+<script src="http://encuentralopronto.com/template/front/assets/plugins/dropdown/js/jquery.dropdown.js">
+<script src="http://encuentralopronto.com/template/back/plugins/chosen/chosen.jquery.min.js">
+
+</html>
