@@ -45,7 +45,9 @@
                     <?php
                      if ($this->session->userdata('user_login') != "yes") {
                               echo '<div class="registerProfessional"><span class="dataLogin">Para ver los datos de contacto debes iniciar sesión</span>
-                            <input type="submit" value="Contactar profesional"></div>';
+                              <form >
+                            <input type="submit" value="Contactar profesional"></form>
+                            </div>';
                         }
                         else{
 
