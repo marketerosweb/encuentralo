@@ -43,21 +43,35 @@
                         <br />
 
                     <?php
-                        if ($this->session->userdata('user_login')) {
-                            echo '
-                        <div class="profileProfessional">
-                            <table>
-                                <tr> <td> Correo Electrónico: </td> <td>'.$row['email'].'</td></tr>
-                                <tr> <td> Ciudad: </td><td>'.$row['ciudad'].'</td></tr>
-                                <tr> <td> Teléfono: </td><td>'.$row['telefono'].'</td></tr>
-                            </table>
-                        </div>';
-                            
-
-                        } else {
-                            echo '<div class="registerProfessional"><span class="dataLogin">Para ver los datos de contacto debes iniciar sesión</span>
+                     if ($this->session->userdata('user_login') != "yes") {
+                              echo '<div class="registerProfessional"><span class="dataLogin">Para ver los datos de contacto debes iniciar sesión</span>
                             <input type="submit" value="Contactar profesional"></div>';
                         }
+                        else{
+
+                            if ($_GET['item'] == '1'){
+                                 echo '
+                                <div class="profileProfessional">
+                                    <table>
+                                        <tr> <td> Correo Electrónico: </td> <td>'.$row['email'].'</td></tr>
+                                        <tr> <td> Ciudad: </td><td>'.$row['ciudad'].'</td></tr>
+                                        <tr> <td> Teléfono: </td><td>'.$row['telefono'].'</td></tr>
+                                    </table>
+                                </div>';
+                            }
+                            else{
+                                ?>
+                                   <form method="get" action="">
+                                    <input type="hidden" name="item" value="1">
+                                    <input type="submit" value="Ver datos">
+                                   </form>
+                                <?php
+                            }
+
+                           
+
+                        }
+                        
                     ?>
 
                     
