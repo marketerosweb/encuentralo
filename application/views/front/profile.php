@@ -16,6 +16,14 @@
                 <?php } else { ?>
                     <img class="img-responsive profile-img margin-bottom-20" src="<?php echo base_url(); ?>uploads/user_image/default.png" >
                 <?php } ?>
+                    <table>
+                        <tr>
+                            <td><center> <form method="post" > <input type="submit" value="Ingresar Productos">  </form></center></td>
+                        </tr>
+                        <tr>
+                            <td><center> <form method="post" > <input type="submit" value="Ingresar Servicio">  </form></center></td>
+                        </tr>
+                    </table>
                     <table class="table">
                     <tbody>
                         <tr>
